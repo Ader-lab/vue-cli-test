@@ -56,8 +56,6 @@ export default {
     },
     methods: {
       loginBtn() {
-        console.log(this.form.email)
-        console.log(this.form.password)
         if(this.form.email && this.form.password) this.loginStatus = true;
       }
     }

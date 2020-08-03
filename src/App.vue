@@ -8,16 +8,3 @@
   #app {}
 </style>
 
-<script>
-export default {
-    name: "Home",
-    components: {
-      Menu
-    },
-    methods: {
-      loginStatusFn(bool) {
-        console.log(bool)
-      }
-    }
-  };
-</script>
