@@ -27,11 +27,16 @@
         
         <b-button 
           type="button"
-          variant="primary"
+          variant="secondary"
           @click="loginBtn()"
-        >登入
+          v-for="(item, idx) in correctBtn"
+          :class="{ btnColor: item.click }"
+          :key = "item.name"
+        >{{ item.name }}
         </b-button>
-        <b-button type="reset" variant="danger">註冊</b-button>
+
+
+        <b-button type="reset" variant="secondary">註冊</b-button>
       </b-form>
     </div>
   </div>
@@ -47,6 +52,10 @@ export default {
   },
   data() {
       return {
+        correctBtn: [
+          { name: "登入", click: true },
+          { name: "註冊", click: false } 
+        ],
         form: {
           email: '',
           password: '',
@@ -56,6 +65,7 @@ export default {
     },
     methods: {
       loginBtn() {
+          // :variant="{item.click: 'secondary'}"
         if(this.form.email && this.form.password) this.loginStatus = true;
       }
     }
@@ -63,5 +73,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .btnColor{
+    background-color: #fa0;
+  }
 </style>
