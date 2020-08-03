@@ -1,6 +1,6 @@
 <template>
   <div id="LoginPage">
-    <Menu :loginStatus="loginStatus" />
+    <Menu />
     <div class="btnGroup">
       <button
         type="button"
@@ -12,8 +12,11 @@
       >{{ item.name }}</button>
     </div>
     <LoginRegister v-if="correctBtn[0].click" />
+    <!-- <LoginRegister v-else>
+      <template v-slot:name>毛衣</template>
+    </LoginRegister>-->
 
-    <div class="Registered" v-else>
+    <!-- <div class="Registered" v-else>
       <h3>註冊頁面</h3>
       <b-form>
         <b-form-group id="input-group-2" label-for="input-2">
@@ -28,7 +31,7 @@
 
         <button type="button" class="btn btn-info" @click="registeredBtn()">註冊</button>
       </b-form>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -52,13 +55,12 @@ export default {
         name: "",
         email: "",
         password: ""
-      },
-      loginStatus: false
+      }
     };
   },
   methods: {
     loginBtn() {
-      if (this.form.email && this.form.password) this.loginStatus = true;
+      if (this.form.email && this.form.password) console.log("輸入成功");
     },
     changePage() {
       this.correctBtn.map(item => {

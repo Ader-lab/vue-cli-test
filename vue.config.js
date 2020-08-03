@@ -22,10 +22,10 @@ module.exports = {
   },
   configureWebpack: (config) => {
     config.resolve = { // 配置解析别名
-      extensions: ['.js', '.json', '.vue'],
+      extensions: ['.js', '.json', '.vue'],  // 文件後面的副檔名可以省略
       alias: {
         'vue': 'vue/dist/vue.js',
-        '@': path.resolve(__dirname, './src'),
+        '@': path.resolve(__dirname, './src'),  // 用@代替./src
         '@c': path.resolve(__dirname, './src/components'),
       }
     }

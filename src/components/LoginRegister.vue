@@ -1,5 +1,6 @@
 <template>
   <div class="Login" v-if="correctBtn[0].click">
+    <!-- <slot name="name" /> -->
     <h3>{{correctBtn[0].name}}</h3>
     <b-form>
       <b-form-group id="input-group-1" label="帳號" label-for="input-1">
