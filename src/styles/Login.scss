@@ -12,7 +12,7 @@
         width: 100%;
         height: auto;
         margin: 20px 0;
-        text-align: center;
+        // text-align: center;
         > button {
             margin: 0 10px;
         }
@@ -32,21 +32,6 @@
             margin-right: 5px;
         }
     }
-    > .Registered {
-        width: 40%;
-        height: auto;
-        padding: 15px;
-        background-color: #f5f5f5;
-        border-radius: 10px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        button {
-            margin-right: 5px;
-        }
-    }
-
 
 }
 

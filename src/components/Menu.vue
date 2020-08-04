@@ -1,12 +1,11 @@
 <template>
   <div id="Menu">
-    <div id="nav">
+    <nav>
       <router-link to="/">Home</router-link>|
       <router-link to="/login">Login</router-link>|
       <router-link to="/cart">Cart</router-link>
-    </div>
-    <router-view />
-    <h2>請先登入</h2>
+      <h3>請先登入</h3>
+    </nav>
   </div>
 </template>
 
